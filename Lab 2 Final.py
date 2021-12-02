@@ -34,17 +34,24 @@ min_rating = input()
 try:
     min_rating = float(min_rating)
 except:
+    if min_rating == '':
+        print('')
+    else:
+        print('К сожелению вы ввели не число или вообще ничего не ввели, значит это не будет учтено(')
+        time.sleep(0.5)
     min_rating = 0
-    print('К сожелению вы ввели не число или вообще ничего не ввели, значит это не будет учтено(')
-    time.sleep(0.3)
 print('Какое минимальное количество голосов вас интересует? Если это для вас не важно нажмите Enter.')
 min_number_votes = input()
 try:
     min_number_votes = float(min_number_votes)
 except:
+    if min_number_votes == '':
+        print('')
+    else:
+        print('К сожелению вы ввели не число или вообще ничего не ввели, значит это не будет учтено(')
+        time.sleep(0.5)
     min_number_votes = 0
-    print('К сожелению вы ввели не число или вообще ничего не ввели, значит это не будет учтено(')
-    time.sleep(0.3)
+
 print('Какие жанры вас интересуют? Если это для вас не важно нажмите Enter.')
 tags_user = input().split(", ")
 print('Какие предупреждения вас интересуют? Если это для вас не важно нажмите Enter.')
@@ -56,9 +63,12 @@ min_episodes = input()
 try:
     min_episodes = float(min_episodes)
 except:
+    if min_episodes == '':
+        print('')
+    else:
+        print('К сожелению вы ввели не число или вообще ничего не ввели, значит это не будет учтено(')
+        time.sleep(0.5)
     min_episodes = 0
-    print('К сожелению вы ввели не число или вообще ничего не ввели, значит это не будет учтено(')
-    time.sleep(0.3)
 print('Важно для вас чтобы аниме ещё продолжало выпускатьcя или уже закончило? Введите "True" или "False". Если это для вас не важно нажмите Enter.')
 finish_user = input()
 print('Какие годы начала съёмки аниме вас интересует? Если это для вас не важно нажмите Enter.')
